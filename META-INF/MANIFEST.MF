@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: registration-service
+Bundle-SymbolicName: springBootCrudPrj
+Bundle-Version: 1.0.0.qualifier
+Export-Package: com.springboot.crud.api.controller,
+ com.springboot.crud.api.dao,
+ com.springboot.crud.api.dto
