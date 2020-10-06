@@ -1,7 +1,7 @@
 target
 build
 bin
-Data/src/META-INF/
+META-INF
 *~
 *.log
 .classpath
