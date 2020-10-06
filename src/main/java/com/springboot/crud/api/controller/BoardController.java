@@ -74,13 +74,13 @@ public class BoardController {
  
     		String fileName = files[i].getOriginalFilename();
         	String fileNameExtension = FilenameUtils.getExtension(fileName).toLowerCase();
-        	File destinationFile;
+        	FileDto destinationFile;
         	String destinationFileName;
         	String fileUrl = "C:/Users/dbsgu/Downloads/springBootCrudPrj/src/main/java/uploadFiles/";        
       
         	do {
         		destinationFileName = RandomStringUtils.randomAlphanumeric(32) + "." + fileNameExtension; 
-                destinationFile = new File(fileUrl + destinationFileName); 
+                destinationFile = new FileDto(fileUrl + destinationFileName); 
         	} while (destinationFile.exists());
         	       	
         	
@@ -153,7 +153,7 @@ public class BoardController {
             String oriFileName = fileVO.getFileOriName();
             InputStream in = null;
             OutputStream os = null;
-            File file = null;
+            FileDto file = null;
             boolean skip = false;
             String client = "";
             
@@ -162,7 +162,7 @@ public class BoardController {
             
             //파일을 읽어 스트림에 담기  
             try{
-                file = new File(savePath, fileName);
+                file = new FileDto(savePath, fileName);
                 in = new FileInputStream(file);
             } catch (FileNotFoundException fe) {
                 skip = true;
